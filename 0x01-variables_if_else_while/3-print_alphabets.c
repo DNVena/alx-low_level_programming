@@ -6,13 +6,12 @@
  */
 int main(void)
 {
-	char alphabet[53] = "abcdefghijklmnopqrstuvwxyz"
-			"ABCDEFGHIJKLMNOPQRSTUVWXYZ\n";
+	char bt[53] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\n";
 	int i = 0;
 
-	while (alphabet[i] > '\0')
+	while (bt[i] >= '\0')
 	{
-		putchar(alphabet[i]);
+		putchar(bt[i]);
 		i++;
 	}
 	return (0);
