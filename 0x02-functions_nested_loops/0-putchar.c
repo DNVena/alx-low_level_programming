@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define MAXSTRING 80
-#include "_putchar.h"
+#include "main.h"
 
 /**
  * main - prints putchar
