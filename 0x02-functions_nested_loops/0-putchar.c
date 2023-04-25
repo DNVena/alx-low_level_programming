@@ -12,7 +12,6 @@ int main(void)
 	int i = 0;
 	char num[] = "_putchar";
 
-
 	for (i = 0; i < MAXSTRING; i++)
 	{
 		if (num[i] == '\0')
@@ -25,6 +24,5 @@ int main(void)
 			putchar(num[i]);
 		}
 	}
-	
 	return (0);
 }
