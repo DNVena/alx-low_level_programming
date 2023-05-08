@@ -6,43 +6,20 @@
  * @dest: takes pointer
  * @src: takes pointer
  * @n: takes integer
+ * Return: Always 0
  */
-char *_memcpy(char *dest, char *src)
-{
-	char **pr;
-	pr = &src;
-	*dest = **pr;
-	return (dest);
-}
-void simple_print_buffer(char *buffer, unsigned int size)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
-	
-	i = 0;
-	
-	while (i < size)
+
+	while (n > 0)
 	{
-		if (i % 10)
+		for (i = 0; i < n; i++)
 		{
-			printf(" ");
+			*dest = src[i];
 		}
-		if (!(i % 10) && i)
-		{
-		       	printf("\n");
-		}
-		printf("0x%02x", buffer[i]);
-		i++;
+		dest++;
+		n--;
 	}
-	printf("\n");
+	return (dest);
 }
-int main(void)
-{
-	char buffer[98] = "hello";
-	char buffer2[98] = "world";
-
-
-	_memcpy(buffer + 50, buffer2);
-	printf(buffer);
-	return (0);
-}
-
