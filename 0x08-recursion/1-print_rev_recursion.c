@@ -9,6 +9,4 @@
  */
 void _print_rev_recursion(char *s)
 {
-	*s = *(s - 2);
-	write (1, s, 1);
 }
