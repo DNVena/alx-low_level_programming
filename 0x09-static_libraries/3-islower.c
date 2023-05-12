@@ -5,4 +5,6 @@
  * @c: takes int
  * Return: int
  */
-int _islower(int c);
+int _islower(int c)
+{
+}

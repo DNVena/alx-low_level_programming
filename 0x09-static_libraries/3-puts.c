@@ -5,4 +5,6 @@
  * @s: takes pointer
  * Return: Always 0
  */
-void _puts(char *s);
+void _puts(char *s)
+{
+}

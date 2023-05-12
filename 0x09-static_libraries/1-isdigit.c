@@ -5,4 +5,6 @@
  * @c: takes int
  * Return: Always int
  */
-int _isdigit(int c);
+int _isdigit(int c)
+{
+}

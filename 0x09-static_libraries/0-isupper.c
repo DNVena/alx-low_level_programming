@@ -5,4 +5,6 @@
  * @c: takes integer
  * Return: integer
  */
-int _isupper(int c);
+int _isupper(int c)
+{
+}

@@ -5,4 +5,6 @@
  * @c: takes int
  * Return: int
  */
-int _isalpha(int c);
+int _isalpha(int c)
+{
+}

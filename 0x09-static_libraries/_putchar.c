@@ -6,4 +6,6 @@
  * Return: int
  * Return: int
  */
-int _putchar(char c);
+int _putchar(char c)
+{
+}
