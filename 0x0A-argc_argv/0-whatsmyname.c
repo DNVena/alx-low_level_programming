@@ -38,7 +38,7 @@ void _puts_recursion(char *s)
  * Return: Always (0)
  */
 
-int main(int argc, char *argv[])
+int main(int __attribute__ ((unused)) argc, char *argv[])
 {
 	_puts_recursion(argv[0]);
 	return (0);
