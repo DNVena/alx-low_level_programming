@@ -34,30 +34,22 @@ int _toint(char str[])
 }
 
 /**
- * _strint - strings int
- * @str: takes char
- * @num: takes int
- * Return: pointer
+ * _prt - prints int
+ * @n: takes int
+ * Return: void
  */
-char *_strint(char str[], int num)
+void _prt(int n)
 {
-	int i, rem, len = 0, n;
-
-	n = num;
-
-	while (n != 0)
+	if (n < 0)
 	{
-		len++;
-		n /= 10;
+		_putchar('-');
+		n = -n;
 	}
-	for (i = 0; i < len; i++)
+	if (n / 10)
 	{
-		rem = num % 10;
-		num = num / 10;
-		str[len - (i + 1)] = rem + '0';
+		_prt(n / 10);
 	}
-	str[len] = '\0';
-	return (str);
+	_putchar(n % 10 + '0');
 }
 
 /**
@@ -85,22 +77,12 @@ int main(int argc, char *argv[])
 	else
 	{
 		int total;
-		int i = 0;
 		int num1, num2;
-		char str;
-		char *t;
-		char *p;
 
-		p = &str;
 		num1 = _toint(argv[1]);
 		num2 = _toint(argv[2]);
 		total = _mul(num1, num2);
-		t = _strint(p, total);
-		while (t[i] != '\0')
-		{
-			_putchar(t[i]);
-			i++;
-		}
+		_prt(total);
 	}
 	_putchar('\n');
 	return (0);
