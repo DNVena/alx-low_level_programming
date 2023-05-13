@@ -46,8 +46,11 @@ int main(int argc, char __attribute__ ((unused)) *argv[])
 	{
 		_putchar('0');
 	}
-	t = _strint(p, count);
-	_putchar(*t);
+	else
+	{
+		t = _strint(p, count);
+		_putchar(*t);
+	}
 	_putchar('\n');
 	return (0);
 
