@@ -1,58 +1,107 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _mul - multiplies 2 numbers
  * @a: takes int
  * @b: takes int
- * Returns: int
+ * Return: int
  */
 int _mul(int a, int b)
 {
 	int mul;
+
 	mul = a * b;
 	return (mul);
 }
 
 /**
- * _strlen - finds the length of a string
- * @s: takes a character pointer
- * Return: Always 0
+ * _toint - converts string to int
+ * @str: takes string
+ * Return: int
  */
-int _strlen(char *s)
+int _toint(char str[])
 {
 	int i = 0;
+	int sum = 0;
 
-	while (*s != '\0')
+	while (str[i] != '\0')
 	{
+		sum = sum * 10 + (str[i] - 48);
 		i++;
-		s++;
 	}
-	return (i);
+	return (sum);
 }
+
 /**
- * main - runs  _mul function
+ * _strint - strings int
+ * @str: takes char
+ * @num: takes int
+ * Return: pointer
+ */
+char *_strint(char str[], int num)
+{
+	int i, rem, len = 0, n;
+
+	n = num;
+
+	while (n != 0)
+	{
+		len++;
+		n /= 10;
+	}
+	for (i = 0; i < len; i++)
+	{
+		rem = num % 10;
+		num = num / 10;
+		str[len - (i + 1)] = rem + '0';
+	}
+	str[len] = '\0';
+	return (str);
+}
+
+/**
+ * main - runs _mul function
  * @argc: takes int
- * @argv: takes pointer to array
+ * @argv: takes array of pointers
  * Return: int
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	int num1, num2;
-	char t[] = "Error";
-	char *c = t;
-	int len1 = _strlen(*argv[1]);
-	int len2 = _strlen(*argc[2]);
-
-	for (i = 0; i < len1; i++)
+	if (argc < 3)
 	{
-		num1 = num1 + (
+		int j;
+		char *n;
 
-	if (argc < 2)
-	{
-		_putchar(*c);
+		n = "Error";
+
+		for (j = 0; n[j] != '\0'; j++)
+		{
+			_putchar(n[j]);
+		}
+		_putchar('\n');
 		return (1);
 	}
 	else
-	return (_mul(*argv[1], *argv[2]));
+	{
+		int total;
+		int i = 0;
+		int num1, num2;
+		char str;
+		char *t;
+		char *p;
+
+		p = &str;
+		num1 = _toint(argv[1]);
+		num2 = _toint(argv[2]);
+		total = _mul(num1, num2);
+		t = _strint(p, total);
+		while (t[i] != '\0')
+		{
+			_putchar(t[i]);
+			i++;
+		}
+	}
+	_putchar('\n');
+	return (0);
 }
