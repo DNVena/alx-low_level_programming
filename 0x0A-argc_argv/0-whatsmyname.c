@@ -3,6 +3,7 @@
 
 /**
  * main - prints name of file
+ * @argc: takes int
  * @argv: takes pointer to array
  * Return: Always (0)
  */
