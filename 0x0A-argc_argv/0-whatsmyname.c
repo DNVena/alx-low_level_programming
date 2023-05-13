@@ -1,4 +1,16 @@
 #include "main.h"
+#include <unistd.h>
+
+/**
+ * _putchar - prints characters
+ * @c: takes characters
+ * Return: Always character
+ */
+
+void _putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 /**
  * _puts_recursion - prints a string
@@ -7,7 +19,7 @@
  */
 void _puts_recursion(char *s)
 {
-	_putchar(*s);
+	write(1, s, 1);
 	s++;
 	if (*s)
 	{
