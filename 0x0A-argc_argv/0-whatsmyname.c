@@ -1,5 +1,23 @@
 #include "main.h"
-#include <stdio.h>
+
+/**
+ * _puts_recursion - prints a string
+ * @s: takes character pointer
+ * Return: void
+ */
+void _puts_recursion(char *s)
+{
+	_putchar(*s);
+	s++;
+	if (*s)
+	{
+		_puts_recursion(s);
+	}
+	if (*s == '\0')
+	{
+		_putchar('\n');
+	}
+}
 
 /**
  * main - prints name of file
@@ -10,6 +28,6 @@
 
 int main(int argc, char *argv[])
 {
-	printf("%s \n", argv[0]);
+	_puts_recursion(argv[0]);
 	return (0);
 }
