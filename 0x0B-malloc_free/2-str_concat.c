@@ -41,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 	len1 = _len(s1);
 	len2 = _len(s2);
 	sum_len = len1 + len2;
-	arr = malloc((sizeof(char) * sum_len - 4));
+	arr = malloc((sizeof(char) * sum_len - 3));
 	if (arr == NULL)
 	{
 		return (NULL);
