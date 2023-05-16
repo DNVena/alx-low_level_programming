@@ -6,7 +6,7 @@
  * create_array - creates an array
  * @size: takes unsigned int
  * @c: takes char
- * return: pointer
+ * Return: pointer
  */
 char *create_array(unsigned int size, char c)
 {
@@ -19,13 +19,13 @@ char *create_array(unsigned int size, char c)
 	}
 	else
 	{
-		long unsigned int i;
+		unsigned long int i;
 
-		for ( i = 0; i < sizeof(arr); i++)
+		for (i = 0; i < sizeof(arr); i++)
 		{
 			arr[i] = c;
 			i++;
 		}
 	}
-	return(arr);
+	return (arr);
 }
