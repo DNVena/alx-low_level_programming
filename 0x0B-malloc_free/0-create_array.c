@@ -11,22 +11,17 @@
 char *create_array(unsigned int size, char c)
 {
 	char *arr;
+	unsigned long int i = 0;
 
 	arr = malloc(sizeof(char) * size);
-	if (sizeof(arr == 0)
+	if (size == 0)
 	{
-		printf("failed to allocate memory");
 		return (NULL);
 	}
-	else
+	while (i < (sizeof(char) * size))
 	{
-		unsigned long int i;
-
-		for (i = 0; i < sizeof(arr); i++)
-		{
-			arr[i] = c;
-			i++;
-		}
+		arr[i] = c;
+		i++;
 	}
 	return (arr);
 }
