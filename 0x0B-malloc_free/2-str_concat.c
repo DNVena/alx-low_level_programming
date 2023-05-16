@@ -38,6 +38,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
+	if (s1 == NULL && s2 == NULL)
+	{
+		arr = "";
+	}
 	len1 = _len(s1);
 	len2 = _len(s2);
 	sum_len = len1 + len2;
