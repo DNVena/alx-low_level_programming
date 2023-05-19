@@ -35,7 +35,7 @@ void more_numbers(void)
 		{
 			_prt(i);
 		}
-		putchar('\n');
+		_putchar('\n');
 		j++;
 	}
 }
