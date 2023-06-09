@@ -9,10 +9,14 @@
 void print_binary(unsigned long int n)
 {
 	int i;
+	unsigned long int temp;
 
-	for (i = 10; i >= 0; i--)
+	for (temp = n, i = 0; (temp >>= 1) > 0; i++)
+		;
+
+	for (; i >= 0; i--)
 	{
-		if (n & (1 << i))
+		if ((n >> i) & 1)
 		{
 			_putchar('1');
 		}
